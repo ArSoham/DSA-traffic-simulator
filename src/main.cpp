@@ -1,5 +1,6 @@
 // src/main.cpp
-#include "renderer.h"
+#include "include/renderer.h"
+
 #include "queue.h"
 #include <chrono>
 #include <thread>
