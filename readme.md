@@ -43,7 +43,7 @@ The traffic processing algorithm follows these steps:
 
 1. Read vehicle data from files.
 2. Enqueue vehicles into respective lane queues.
-3. Check priority conditions (AL2 > 10 vehicles).
+3. Check priority conditions.
 4. Process vehicles according to current conditions.
 5. Update traffic lights accordingly.
 6. Render the visualization.
@@ -134,24 +134,12 @@ g++ -Iinclude -Llib -o bin/main.exe src/main.c src/traffic_simulation.c -lmingw3
 ```
 
 ## ▶️ Running the Simulation
-
-1. Start the vehicle generator:
-```bash
-./bin/generator
-```
-2. In another terminal, start the main simulation:
+1. start the main simulation:
 ```bash
 ./bin/main.exe
 ```
-3. 🚗 Watch vehicles navigate the intersection!
-4. ❌ Click the close button (X) to exit.
-
-## 🚙 Vehicle Types
-
-- 🔵 Regular cars
-- 🔴 Ambulances
-- 🔷 Police cars
-- 🟠 Fire trucks
+2. 🚗 Watch vehicles navigate the intersection!
+3. ❌ Click the close button (X) to exit.
 
 ## 🏁 Traffic Management
 
