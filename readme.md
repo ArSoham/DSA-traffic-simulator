@@ -4,7 +4,7 @@
 
 This project implements a queue-based traffic management simulation for a four-way junction, developed as part of the Data Structure and Algorithms (COMP202) course.
 
-![Traffic Simulation](https://github.com/YOUR_USERNAME/dsa-queue-simulator/blob/main/Simulation.gif)
+![Traffic Simulation](https://github.com/ArSoham/dsa-queue-simulator/blob/main/demo.gif)
 
 ## 📋 Project Overview
 
@@ -29,13 +29,7 @@ The system manages normal and high-priority vehicle dispatch using queue data st
 
 - **Generator**: Creates vehicle data and writes to text files.
 - **Simulator**: Reads vehicle data, manages queues, controls traffic lights, and provides visualization.
-
-## 📊 Data Structures
-
-| Structure | Implementation | Purpose |
-|-----------|----------------|---------|
-| Queue | Array-based | Storing vehicles in each lane |
-| Priority Queue | Modified queue with dynamic priority | Managing high-priority lanes |
+|
 
 ## 📚 Algorithm Design
 
@@ -126,9 +120,6 @@ DSA-Queue-Simulator/
 git clone https://github.com/YOUR_USERNAME/dsa-queue-simulator.git
 cd dsa-queue-simulator
 
-# Compile the generator
-g++ -o bin/generator src/generator.c src/traffic_simulation.c -lSDL2 -Iinclude -Llib -lmingw32 -lSDL2main -lSDL2
-
 # Compile the simulator
 g++ -Iinclude -Llib -o bin/main.exe src/main.c src/traffic_simulation.c -lmingw32 -lSDL2main -lSDL2
 ```
@@ -156,14 +147,4 @@ g++ -Iinclude -Llib -o bin/main.exe src/main.c src/traffic_simulation.c -lmingw3
 4. 🚀 Push (`git push origin feature/AmazingFeature`)
 5. 🔥 Open a Pull Request
 
-## 📚 References
 
-- 📖 [SDL2 Documentation](https://wiki.libsdl.org/)
-- 📘 Queue Data Structure: Introduction to Algorithms, CLRS (Cormen, Leiserson, Rivest, Stein)
-- 🚑 Traffic Flow Theory: Highway Capacity Manual (Transportation Research Board)
-
-## 🙌 Acknowledgments
-
-- ❤️ SDL2 Dev Team
-- 🔬 Traffic Simulation Research Community
-- 🎯 Contributors & Testers
