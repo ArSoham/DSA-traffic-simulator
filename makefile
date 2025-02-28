@@ -1,27 +1,15 @@
-CXX = g++
-CXXFLAGS = -std=c++11 -Wall -I./include -I/usr/include/SDL2
-LDFLAGS = -lSDL2
+all:
+	g++ -o bin/generator src/generator.c src/traffic_simulation.c -lSDL2 -Iinclude -Llib -lmingw32 -lSDL2main -lSDL2
 
-SRC_DIR = src
-BUILD_DIR = build
-SOURCES = $(wildcard $(SRC_DIR)/*.cpp)
-OBJECTS = $(SOURCES:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/%.o)
+	g++ -Iinclude -Llib -o bin/main.exe src/main.c src/traffic_simulation.c -lmingw32 -lSDL2main -lSDL2
 
-EXECUTABLE = $(BUILD_DIR)/traffic_simulator
+generator: 
+	g++ -o bin/generator src/generator.c src/traffic_simulation.c -lSDL2 -Iinclude -Llib -lmingw32 -lSDL2main -lSDL2
 
-all: $(BUILD_DIR) $(EXECUTABLE)
-
-$(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
-
-$(EXECUTABLE): $(OBJECTS)
-	$(CXX) $(OBJECTS) -o $@ $(LDFLAGS)
-
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+main:
+	g++ -Iinclude -Llib -o bin/main.exe src/main.c src/traffic_simulation.c -lmingw32 -lSDL2main -lSDL2
 
 clean:
-	rm -rf $(BUILD_DIR)
-
-.PHONY: all clean
-
+	rm bin/generator.exe
+	rm bin/main.exe
+	rm bin/vehicles.txt
