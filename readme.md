@@ -120,8 +120,8 @@ DSA-Queue-Simulator/
 git clone https://github.com/YOUR_USERNAME/dsa-queue-simulator.git
 cd dsa-queue-simulator
 
-# Compile the simulator
-g++ -Iinclude -Llib -o bin/main.exe src/main.c src/traffic_simulation.c -lmingw32 -lSDL2main -lSDL2
+# Compile
+g++ -o bin/generator src/generator.c src/traffic_simulation.c -lSDL2 -Iinclude -Llib -lmingw32 -lSDL2main -lSDL2
 ```
 
 ## ▶️ Running the Simulation
